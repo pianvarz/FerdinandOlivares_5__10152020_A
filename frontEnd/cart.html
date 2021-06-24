@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Orinoco Cameras - Home page </title>
+        <meta name="viewport" content="width=device-width"/>
+    
+
+        <!--        Scripts          -->
+        <!--        FontAwasome      -->
+<script src="https://kit.fontawesome.com/aa6a1c9797.js" crossorigin="anonymous"></script>
+       
+
+        <!--        Javascript       -->
+<script src="jsFiles/cart.js" crossorigin="anonymous" async></script>
+
+        <!--        CSS              -->
+<link rel="stylesheet" href="/frontEnd/cssFiles/SASS/style.css" type="text/css">
+
+</head>
+
+<body>
+<!--    Navigation  Block   -->
+    
+        <nav class="logoContainer">
+            <div class="logoBlock">
+                <span>
+                    <a href="../index.html"><img id="logoimg" src="/frontEnd/htmlFiles/logo/orinocoLogo.png" alt="Orinoco Brand"></a>
+                </span>
+            </div>
+            <div class="topButtons">
+                    <button>
+                        <a id="homeButton" href="../index.html">Home
+                        </a>
+                    </button>
+                    <button>
+                        <a href="cart.html" id="addedCartProducts">Cart
+                        </a>
+                    </button>
+            </div>
+        </nav>
+<!--    Cart Container Javascript Table   -->
+
+        <section id="cartContainer">
+                <table class='cartTable'>
+                    <thead>
+                        <tr>
+                            <th>Camera</th>
+                            <th>Lense</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody id="productTable">
+                    <!--- Javascript Section -->
+                    </tbody>
+                </table>
+            <p> Total Price: £ <span id='totalPrice'></span></p>
+        </section>
+
+<!--    Cart Container Javascript Contact Form   -->
+
+    <section id="formContainer">
+        <h1 class="details"> Please fill the following </h1>
+            <form method="POST" class="orderDetails" name="orderForm">
+                <div class="form-aspects">
+                    <label for="firstName">First Name</label>
+                        <input type="text" class="form-details letterInput" id="firstName" placeholder=" e.g. Joe Oliver" name="firstName" required>
+                        <small></small>
+                </div> 
+                <div class="form-aspects">
+                    <label for="lastName">Last Name</label>
+                        <input type="text" class="form-details letterInput" id="lastName" placeholder=" e.g. Brown" name="lastName" required>
+                        <small></small>
+                    </div> 
+                <div class="form-aspects" id="addressForm">
+                    <label for="address">Address</label>
+                        <input class="form-details letNumInput" id="address" placeholder=" e.g. 11 Robin Street " name="address" required>
+                        <small></small>
+                    </div> 
+                <div class="form-aspects">
+                    <label for="city">City</label>
+                        <input  class="form-details letNumInput" id="city" placeholder=" e.g. Oxford " name="city" required>
+                        <small></small>
+                    </div> 
+                <div class="form-aspects">
+                    <label for="email">Email Address</label>
+                        <input class="form-details allInput" id="email" placeholder=" e.g. joeBrown@email.com" name="email" required>
+                        <small></small>
+                    </div> 
+                   
+                        <button type="submit" id="confirmButton" disabled="true" > Confirm Details </button>
+            
+            </form>
+    </section>
+
+<footer>
+    <div class="footer">
+        <i class="icon-footer fab fa-twitter fa-2x"></i>
+        <i class="icon-footer fab fa-facebook-f fa-2x"></i>
+        <i class="icon-footer fab fa-instagram fa-2x"></i>
+        <i class="icon-footer fas fa-envelope-square fa-2x"></i>
+    </div>
+</footer>
