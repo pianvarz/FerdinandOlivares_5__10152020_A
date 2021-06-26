@@ -1,0 +1,315 @@
+/*----          Variables and Mixes         ----*/
+* {
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+* a :visited {
+  color: inherit;
+}
+
+/*----          logoBlock and Navigations (Logo, home and cart)         ------*/
+.logoContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.logoContainer .logoBlock {
+  width: 50%;
+}
+
+.logoContainer .logoBlock #logoimg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50%;
+  max-width: 450px;
+  height: 100px;
+  padding: 10px;
+}
+
+.logoContainer .topButtons {
+  height: 100px;
+  padding: 20px;
+}
+
+.logoContainer .topButtons button {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100px;
+  padding: 20px;
+  background-color: inherit;
+}
+
+.logoContainer .topButtons button a {
+  font-size: 14px;
+  width: 100%;
+  height: 200px;
+}
+
+#containerCameras {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#containerCameras section {
+  width: 100%;
+}
+
+#containerCameras section h1 {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  border: 1px solid transparent;
+}
+
+#containerCameras .card {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 40%;
+  border: solid 1px black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#containerCameras .card .cameraDetails {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#containerCameras .card .cameraDetails .cameraDescription {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 80%;
+}
+
+#containerCameras .card .cameraImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 20px;
+  width: 191px;
+  height: 120px;
+  max-height: auto;
+}
+
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* ----------- productInfo HTML tags ----------*/
+.productContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.productContainer #productOfInterest .productSection {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.productContainer #productOfInterest .productSection .cameraImg {
+  width: 400px;
+}
+
+/* ------------ Cart HTML Tags ----------*/
+#cartContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1080px;
+}
+
+#cartContainer .cartTable {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#cartContainer .cartTable .cartName {
+  width: 25%;
+}
+
+#cartContainer .cartTable .cartName .cartImg {
+  max-width: 400px;
+}
+
+#cartContainer .cartTable .cartLense {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#cartContainer .cartTable .cartDescription {
+  width: 20%;
+}
+
+#formContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid black;
+  width: 40%;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+#formContainer #addressForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#formContainer #addressForm label {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  width: 50%;
+}
+
+#formContainer .details {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.textError {
+  outline: none;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 1px red;
+          box-shadow: 0 0 1px red;
+}
+
+.textError :focus {
+  outline: none;
+  border: 1px solid red;
+  -webkit-box-shadow: 0 0 1px red;
+          box-shadow: 0 0 1px red;
+}
+
+.textValid {
+  outline: none;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 1px green;
+          box-shadow: 0 0 1px green;
+}
+
+.textValid :focus {
+  outline: none;
+  border: 1px solid green;
+  -webkit-box-shadow: 0 0 1px green;
+          box-shadow: 0 0 1px green;
+}
+/*# sourceMappingURL=style.css.map */
