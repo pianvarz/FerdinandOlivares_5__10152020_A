@@ -15,6 +15,9 @@
 * {
     @include autoMargin;
     box-sizing: border-box;
+    button {
+        padding: 10px;
+    }
     a {
         text-decoration: none;
         color: black;
@@ -23,6 +26,7 @@
         }
     }
 }
+
 
 
         /*----          logoBlock and Navigations (Logo, home and cart)         ------*/
@@ -90,29 +94,14 @@
             @include autoMargin;
             display: flex; 
             flex-direction: column;
-            .cameraName {
-
-            }
             .cameraDescription {
                 @include autoMargin;
                 display: block;
                 width: 80%;
             }
-            .cameraPrice {
-
-            }
-        }
-        .cameraButtons {
-            .buttons {
-            }
         }
         .cameraImg {
             @include imgSize;
-        }
-        .cameraButtons {
-            .buttons {
-
-            }
         }
     }
 }
@@ -132,6 +121,12 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     #productOfInterest {
+        @include autoMargin;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 20px;
         .productSection {
             @include autoMargin;
             display: flex;
@@ -154,17 +149,15 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 1080px;
+    padding: 20px;
+    font-size: 20px;
     .cartTable {
         justify-content: center;
         .cartName {
             width: 25%;
             .cartImg {
-                max-width: 400px;
+                max-width: 300px;
             }
-        }
-        .cartLense {
-            @include autoMargin;
-            display: flex;
         }
         .cartDescription {
             width: 20%;
@@ -181,15 +174,6 @@ footer {
     width: 40%;
     padding-bottom: 30px;
     margin-bottom: 30px;
-    #addressForm {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        label {
-        align-self: start;
-        width: 50%;
-    }
-    }
     .details { 
         @include autoMargin;
         display: flex;
@@ -197,7 +181,24 @@ footer {
         gap: 20px;
         padding: 20px;
         justify-content: center;
-        .form-aspects {
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        button {
+            @include autoMargin;
+            display: flex;
         }
     }
+}
+
+    /* --------- Confirmation Page -------------*/ 
+
+#confirmationContainer {
+    @include autoMargin;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 20px; 
 }

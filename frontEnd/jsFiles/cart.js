@@ -96,7 +96,7 @@ let camerasInCartFunction = () => {
         }
 
     } else {
-        cartContainer.textContent = "Cart's empty, please have a look at our products. Please click Home to see other items";
+        cartContainer.textContent = "Cart's empty, please have a look at our products. Please click Home (Top right) to see other items";
         let homeButtonFunction = () => {
             topHomeButton.addEventListener('click', e => {
                 document.location.href = '../index.html';
@@ -209,7 +209,6 @@ const validation = (keys, value, fields, name, errorText) => {
         confirmButton.removeAttribute('disabled')
     } else {
         input.style.border = 'thin solid red';
-        inputAlert.textContent = errorText;
         test[name] = false;
         confirmButton.setAttribute('disabled', 'true')
     }
@@ -254,7 +253,7 @@ const orderCameras = () => {
                     .then(function (order) {
                         console.log(order)
                         let confirmedOrder = {
-                            name: contact.firstName + '' + contact.lastName,
+                            name: contact.firstName + ' ' + contact.lastName,
                             price: totalCost,
                             orderId: order.orderId
                         };

@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+* button {
+  padding: 10px;
+}
+
 * a {
   text-decoration: none;
   color: black;
@@ -170,6 +174,22 @@ footer {
       flex-wrap: wrap;
 }
 
+.productContainer #productOfInterest {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 20px;
+}
+
 .productContainer #productOfInterest .productSection {
   margin-left: auto;
   margin-right: auto;
@@ -205,6 +225,8 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 1080px;
+  padding: 20px;
+  font-size: 20px;
 }
 
 #cartContainer .cartTable {
@@ -218,15 +240,7 @@ footer {
 }
 
 #cartContainer .cartTable .cartName .cartImg {
-  max-width: 400px;
-}
-
-#cartContainer .cartTable .cartLense {
-  margin-left: auto;
-  margin-right: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  max-width: 300px;
 }
 
 #cartContainer .cartTable .cartDescription {
@@ -249,25 +263,6 @@ footer {
   margin-bottom: 30px;
 }
 
-#formContainer #addressForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#formContainer #addressForm label {
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  width: 50%;
-}
-
 #formContainer .details {
   margin-left: auto;
   margin-right: auto;
@@ -285,31 +280,38 @@ footer {
           justify-content: center;
 }
 
-.textError {
-  outline: none;
-  border: 1px solid red;
-  -webkit-box-shadow: 0 0 1px red;
-          box-shadow: 0 0 1px red;
+#formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
 }
 
-.textError :focus {
-  outline: none;
-  border: 1px solid red;
-  -webkit-box-shadow: 0 0 1px red;
-          box-shadow: 0 0 1px red;
+#formContainer form button {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.textValid {
-  outline: none;
-  border: 1px solid green;
-  -webkit-box-shadow: 0 0 1px green;
-          box-shadow: 0 0 1px green;
-}
-
-.textValid :focus {
-  outline: none;
-  border: 1px solid green;
-  -webkit-box-shadow: 0 0 1px green;
-          box-shadow: 0 0 1px green;
+/* --------- Confirmation Page -------------*/
+#confirmationContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
