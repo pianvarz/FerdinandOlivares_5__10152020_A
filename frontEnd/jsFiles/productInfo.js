@@ -6,8 +6,9 @@ const classElement = (element, classArray) => {
         element.classList.add(el);
     });
 };
-
 let cart = [];
+let cartStorage = localStorage.getItem('cart');
+let cartParse = JSON.parse(cartStorage);
 
 // transferring productDetailButton of cameras to the product.html 
 const urlParams = new URLSearchParams(window.location.search);
@@ -24,10 +25,6 @@ let camera = null;
 
 // Function for redirecting (clicking the button) to the other cameras available
 const backMainFunction = () => window.location = ("../../index.html" + "#featuredProducts")
-
-// cartProducts & cartProductsParse - number of products placed in the cart 
-const cartProducts = localStorage.getItem('cart');
-const cartProductsParse = JSON.parse(window.localStorage.getItem('cart')); 
 
 // transferring productDetailButton to the product.html 
 const fetchProductID = () => {
@@ -111,10 +108,15 @@ const fetchProductID = () => {
                     lenses: cameraLenses.value,
                     price: camera.price
                 };
+                if (!cartStorage) {
                 cart = [...cart, addCamera];
                 localStorage.setItem('cart', JSON.stringify(cart));
+                } else {
+                updatedCart = [...cartParse, addCamera]
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                location.reload();
+                }
             }
-
             addProductCart();
             alert("Product's added in the cart");
         });

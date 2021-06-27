@@ -11,7 +11,8 @@ const classElement = (element, classArray) => {
 let cart = [];
 // Products placed under the cart
 // // cartProducts & cartProductsParse - number of products placed in the cart 
-const cartProducts = localStorage.setItem("cart", JSON.stringify(cart));
+const cartStorage = localStorage.getItem("cart");
+const cartParse = JSON.parse(cartStorage);
 
 // Setting products in index.html
 // fetchIndex - API request and if/else function if successful 

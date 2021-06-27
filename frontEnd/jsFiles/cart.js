@@ -16,7 +16,14 @@ let cameraParse = JSON.parse(camera);
 
 // achoring html tags 
 const cartContainer = document.getElementById('cartContainer');
-const productTable = document.querySelector('.cartTable').getElementsByTagName('tbody')[0];
+
+try {
+const productTable = document.querySelector('.cartTable').getElementsByTagName('tbody')[0]; 
+} catch (error) {
+    location.reload();
+}
+
+
 const totalPrice = document.getElementById('totalPrice');
 const topHomeButton = document.querySelector('#homeButton');
 
@@ -24,7 +31,6 @@ const topHomeButton = document.querySelector('#homeButton');
 const formContainer = document.querySelector('#formContainer')
 const hideMainBlock = () => (cartContainer.style.display = 'none');
 const appearFormBlock = () => (formContainer.style.display = 'flex');
-
 
 let camerasInCartFunction = () => {
     if (cameraParse.length) {
@@ -72,7 +78,7 @@ let camerasInCartFunction = () => {
                 location.reload();
                 const updateCart = cameraParse.filter( currentCameras => currentCameras !== productInCart);
 
-                const updatedCart = localStorage.setItem('cart', JSON.stringify(updateCart));
+                localStorage.setItem('cart', JSON.stringify(updateCart));
 
                 const currentProducts = products.filter(product => product !== e.target.id);
 
@@ -125,8 +131,9 @@ const purchaseProductFunction = () => { //Purchase products in the cart followed
     });                        
 };
 
-purchaseProductFunction();
 camerasInCartFunction(); 
+purchaseProductFunction();
+
 
 //HTML Selectors for the forms
 const firstName = document.getElementById('firstName');
