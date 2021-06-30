@@ -100,6 +100,23 @@ let camerasInCartFunction = () => {
             cartContainer.innerHTML = "<div> Error Please Try Again Later!! </div>"
             }
         }
+     const purchaseProductFunction = () => { //Purchase products in the cart followed by cart validation
+
+            const purchaseHomeDiv = createElement('div');
+            classElement(purchaseHomeDiv, (['purchaseDiv']));
+            cartContainer.appendChild(purchaseHomeDiv);
+            
+            const purchaseButton = createElement('button');
+            classElement(purchaseButton, (['purchaseButton']));
+            purchaseButton.textContent = 'Buy it now';
+            append(purchaseHomeDiv, purchaseButton);
+            
+            purchaseButton.addEventListener('click', e => {
+                hideMainBlock();
+                appearFormBlock();
+            });                        
+        };
+    purchaseProductFunction();
 
     } else {
         cartContainer.textContent = "Cart's empty, please have a look at our products. Please click Home (Top right) to see other items";
@@ -108,32 +125,13 @@ let camerasInCartFunction = () => {
                 document.location.href = '../index.html';
                 localStorage.clear();
             });
-        }
         homeButtonFunction();
+        }
     }
 
 }
 
-const purchaseProductFunction = () => { //Purchase products in the cart followed by cart validation
-
-    const purchaseHomeDiv = createElement('div');
-    classElement(purchaseHomeDiv, (['purchaseDiv']));
-    cartContainer.appendChild(purchaseHomeDiv);
-    
-    const purchaseButton = createElement('button');
-    classElement(purchaseButton, (['purchaseButton']));
-    purchaseButton.textContent = 'Buy it now';
-    append(purchaseHomeDiv, purchaseButton);
-    
-    purchaseButton.addEventListener('click', e => {
-        hideMainBlock();
-        appearFormBlock();
-    });                        
-};
-
 camerasInCartFunction(); 
-purchaseProductFunction();
-
 
 //HTML Selectors for the forms
 const firstName = document.getElementById('firstName');
